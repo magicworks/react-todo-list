@@ -61,6 +61,21 @@
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 600px) {
+  .Todo-edit-form.is-editing {
+      flex-wrap: nowrap;
+      position: relative;
+      z-index: 1;
+    }
+  .Todo-edit-form.is-editing + .Todo-buttons {
+        position: absolute;
+          right: 3rem;
+          z-index: 0;
+  }
+  .Todo-edit-form input {
+    max-width: calc(100% - 85px);
+  }
+}
 .Todo-edit-form label {
   min-width: 100%;
   margin-bottom: 0.5rem;

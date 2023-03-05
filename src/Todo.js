@@ -44,7 +44,11 @@ class Todo extends Component {
       result = (
         <CSSTransition key='editing' timeout={500} classNames='form'>
           <form
-            className='Todo-edit-form'
+            className={
+              this.state.isEditing
+                ? 'Todo-edit-form is-editing'
+                : 'Todo-edit-form'
+            }
             onSubmit={this.handleUpdate}
           >
             <input

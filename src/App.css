@@ -3,4 +3,21 @@
     bottom: 15px;
     left: 20px;
     font-size: 16px;
+    color: #fff;
+}
+.insp a {
+    color: #fff
+}
+
+@media only screen and (max-width: 600px) {
+    .insp {
+        max-width: calc(100vw - 40px);
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .insp a {
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
